@@ -1,0 +1,6 @@
+{
+  "name": "微信版成语游戏",
+  "description": "一款专为学生设计的微信小程序风格成语学习游戏。包含AI成语接龙、成语消消乐、成语解谜猜猜看和成语掌上画册，寓教于乐，帮助学生轻松掌握成语知识。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
