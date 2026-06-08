@@ -7,7 +7,7 @@ export interface Idiom {
   category: 'elementary' | 'middle' | 'high'; // 适合阶段：小学、初中、高中
 }
 
-export type GameMode = 'home' | 'solitaire' | 'elimination' | 'guess' | 'glossary' | 'profile';
+export type GameMode = 'home' | 'solitaire' | 'elimination' | 'guess' | 'glossary' | 'profile' | 'pk';
 
 export type StudentGrade = 'elementary' | 'middle' | 'high';
 
