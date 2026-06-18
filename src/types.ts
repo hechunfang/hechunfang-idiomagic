@@ -9,7 +9,7 @@ export interface Idiom {
 
 export type GameMode = 'home' | 'solitaire' | 'elimination' | 'guess' | 'glossary' | 'profile' | 'pk';
 
-export type StudentGrade = 'elementary' | 'middle' | 'high';
+export type StudentGrade = 'elementary' | 'middle' | 'high' | 'university';
 
 export interface SolitaireMessage {
   id: string;

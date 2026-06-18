@@ -5,6 +5,7 @@ import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI, Type } from '@google/genai';
 import dotenv from 'dotenv';
 import { USER_IDIOMS_POOL } from './src/idioms_data';
+import { IDIOMS_1000_POOL } from './src/idioms_1000_pool';
 
 dotenv.config();
 
@@ -2878,38 +2879,93 @@ function generateDynamicArtworkFallback(word: string, category: string): string 
           <circle cx="8" cy="27" r="2.5" fill="#1E293B" />
           <circle cx="4" cy="31" r="3" fill="#F43F5E" opacity="0.5" />
         </g>
-        <!-- Impudence index pointing finger alleging it is a "Horse" -->
-        <g transform="translate(40, 160) scale(1.15)">
-          <rect x="-10" y="20" width="40" height="28" rx="6" fill="#F59E0B" />
-          <!-- Long pointing index finger -->
-          <path d="M 30,24 L 64,24 L 64,30 L 30,30 Z" fill="#FDBA74" stroke="#D97706" stroke-width="2" />
-          <path d="M 24,30 C 24,35 34,35 34,30 Z" fill="#FDBA74" />
+        <!-- Impudence          <circle cx="50" cy="120" r="6" fill="#78350F" />
+          <path d="M 35,200 L 65,200 L 50,190 Z" fill="#EA580C" />
+          <!-- Tucked other leg -->
+          <path d="M 32,120 Q 15,140 25,155" fill="none" stroke="#D97706" stroke-width="5" stroke-linecap="round" />
+          
+          <!-- Fluffy yellow spherical body -->
+          <circle cx="50" cy="85" r="35" fill="#FBBF24" stroke="#D97706" stroke-width="3" />
+          <circle cx="50" cy="85" r="24" fill="#FEF08A" />
+          <!-- Red tail plumes -->
+          <path d="M 15,85 Q -15,55 -5,42 C 5,52 15,70 15,85 Z" fill="#EF4444" />
+          <path d="M 15,95 Q -25,85 -8,72 Q 13,85 15,95 Z" fill="#F97316" />
+          
+          <!-- Head neck combo -->
+          <path d="M 68,72 L 80,42 L 95,58 L 74,86 Z" fill="#FBBF24" />
+          <!-- Head -->
+          <circle cx="90" cy="45" r="14" fill="#EA580C" />
+          <!-- Red comb of golden rooster -->
+          <ellipse cx="90" cy="28" rx="5" ry="8" fill="#EF4444" />
+          <ellipse cx="96" cy="30" rx="4" ry="7" fill="#EF4444" />
+          <!-- Eyes closed in deep peaceful concentration -->
+          <line x1="82" y1="45" x2="94" y2="45" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" />
+          <!-- Golden beak -->
+          <polygon points="102,40 110,45 102,50" fill="#FBBF24" />
         </g>
       </svg>`;
 
-    case "一箭双雕":
+    case "眉飞色舞":
       return `<svg viewBox="0 0 400 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <rect width="400" height="300" rx="24" fill="#E0F2FE" />
-        <!-- Golden radiant speed background -->
-        <line x1="80" y1="220" x2="320" y2="80" stroke="#FEE2E2" stroke-width="50" opacity="0.3" stroke-linecap="round" />
-        
-        <!-- Two flying eagle vectors falling left and right -->
-        <g transform="translate(100, 70)">
-          <!-- Upper bird -->
-          <g transform="translate(30, 20)">
-            <ellipse cx="20" cy="20" rx="28" ry="10" transform="rotate(-35)" fill="#64748B" />
-            <path d="M -15,5 Q 10,-35 45,5 Q 15,45 -15,5 Z" fill="#475569" />
-          </g>
-          <!-- Lower bird -->
-          <g transform="translate(110, 80)">
-            <ellipse cx="20" cy="20" rx="28" ry="10" transform="rotate(35)" fill="#64748B" />
-            <path d="M -15,5 Q 10,-35 45,5 Q 15,45 -15,5 Z" fill="#475569" />
-          </g>
+        <rect width="400" height="300" rx="24" fill="#FAF5FF" />
+        <!-- Sparkles of extreme joy/excitement in background -->
+        <g fill="#A855F7" opacity="0.6">
+          <polygon points="60,40 63,45 69,45 64,48 66,54 60,50 54,54 56,48 51,45 57,45" fill="#F59E0B" />
+          <polygon points="320,60 323,65 329,65 324,68 326,74 320,70 314,74 316,68 311,65 317,65" fill="#3B82F6" />
+          <polygon points="80,210 83,215 89,215 84,218 86,224 80,220 74,224 76,218 71,215 77,215" fill="#EF4444" />
+          <polygon points="310,200 313,205 319,205 314,208 316,214 310,210 304,214 306,208 301,205 307,205" fill="#10B981" />
         </g>
-        <!-- Single powerful golden arrow piercing precise geometric line through center -->
-        <g transform="translate(60, 240) rotate(-33 0 0)">
-          <!-- Sleek golden arrow trunk -->
-          <line x1="0" y1="0" x2="280" y2="0" stroke="#EA580C" stroke-width="6" stroke-linecap="round" />
+        <!-- The epic happy smiley face (眉飞色舞!) -->
+        <g transform="translate(110, 60)">
+          <!-- Blushing cheeks -->
+          <circle cx="40" cy="115" r="55" fill="#FCE4EC" opacity="0.6" />
+          <circle cx="140" cy="115" r="55" fill="#FCE4EC" opacity="0.6" />
+          <!-- Rosy dots -->
+          <ellipse cx="28" cy="105" rx="14" ry="7" fill="#F43F5E" opacity="0.4" />
+          <ellipse cx="152" cy="105" rx="14" ry="7" fill="#F43F5E" opacity="0.4" />
+          
+          <!-- Flying eyebrows (Wiggling up and off the forehead in joy) -->
+          <path d="M 12,35 C 20,15 45,15 54,28" fill="none" stroke="#701A75" stroke-width="8.5" stroke-linecap="round" />
+          <path d="M 128,35 C 136,15 161,15 170,28" fill="none" stroke="#701A75" stroke-width="8.5" stroke-linecap="round" stroke-linecap="round" stroke-linecap="round" />
+          <polygon points="50,15 58,10 52,22" fill="#E879F9" />
+          <polygon points="125,15 117,10 123,22" fill="#E879F9" />
+          
+          <!-- Joyful half moon smiling eyes -->
+          <path d="M 18,74 Q 40,95 62,74" fill="none" stroke="#1E293B" stroke-width="8" stroke-linecap="round" />
+          <path d="M 118,74 Q 140,95 162,74" fill="none" stroke="#1E293B" stroke-width="8" stroke-linecap="round" />
+          
+          <!-- Big open happy mouth laughing -->
+          <path d="M 55,115 Q 90,165 125,115 Z" fill="#EF4444" stroke="#991B1B" stroke-width="3" />
+          <!-- Tongue inside mouth -->
+          <ellipse cx="90" cy="138" rx="24" ry="12" fill="#FCA5A5" />
+        </g>
+      </svg>`;
+
+    case "门庭若市":
+      return `<svg viewBox="0 0 400 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="300" rx="24" fill="#FFFBEB" />
+        <!-- Big red target archway gates in background -->
+        <g transform="translate(100, 40)">
+          <!-- Side stone columns -->
+          <rect x="10" y="30" width="22" height="180" fill="#94A3B8" rx="5" />
+          <rect x="168" y="30" width="22" height="180" fill="#94A3B8" rx="5" />
+          <!-- Red imperial gate roof -->
+          <path d="M -10,40 L 210,40 L 190,10 L 10,10 Z" fill="#DC2626" stroke="#991B1B" stroke-width="3" />
+          <rect x="30" y="30" width="140" height="20" fill="#EA580C" />
+          <!-- Open double wooden doors -->
+          <rect x="32" y="50" width="60" height="160" fill="#B45309" opacity="0.3" />
+          <rect x="108" y="50" width="60" height="160" fill="#B45309" opacity="0.3" />
+        </g>
+        <!-- Festive red lanterns hanging -->
+        <circle cx="80" cy="90" r="14" fill="#EF4444" />
+        <rect x="76" y="104" width="8" height="4" fill="#FEF08A" />
+        <circle cx="320" cy="90" r="14" fill="#EF4444" />
+        <rect x="316" y="104" width="8" height="4" fill="#FEF08A" />
+        
+        <!-- Multiple pairs of small footsteps leading through open door (Bustling crowd index) -->
+        <g fill="#D97706" opacity="0.8">
+          <!-- Footsteps pair 1 -->
+          <ellipse cx="160" cy="230" rx="5" ry="10" transform="rotate(-15 160 230)" />580C" stroke-width="6" stroke-linecap="round" />
           <line x1="0" y1="0" x2="280" y2="0" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" />
           <!-- Arrow head -->
           <polygon points="280,-8 296,0 280,8" fill="#C2410C" />
@@ -3125,7 +3181,7 @@ function generateDynamicArtworkFallback(word: string, category: string): string 
           
           <!-- Flying eyebrows (Wiggling up and off the forehead in joy) -->
           <path d="M 12,35 C 20,15 45,15 54,28" fill="none" stroke="#701A75" stroke-width="8.5" stroke-linecap="round" />
-          <path d="M 128,35 C 136,15 161,15 170,28" fill="none" stroke="#701A75" stroke-width="8.5" stroke-linecap="round" stroke-linecap="round" />
+          <path d="M 128,35 C 136,15 161,15 170,28" fill="none" stroke="#701A75" stroke-width="8.5" stroke-linecap="round" />
           <polygon points="50,15 58,10 52,22" fill="#E879F9" />
           <polygon points="125,15 117,10 123,22" fill="#E879F9" />
           
@@ -3404,88 +3460,145 @@ app.get('/api/idiom/detail', async (req, res) => {
     });
   }
 
-  if (!ai) {
-    // If no API Key is set, create a plausible mock representation
-    return res.json({
-      word,
-      pinyin: `${word} pīn yīn`,
-      definition: `关于《${word}》的释义：这是一款优美动听的成语词汇，快开启你的成语想象力吧！`,
-      category: 'elementary',
-      illustration: `<svg viewBox="0 0 400 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <rect width="400" height="300" rx="20" fill="#EFF6FF" />
-        <circle cx="200" cy="130" r="50" fill="#3B82F6" opacity="0.8" />
-        <text x="200" y="220" font-size="24" font-weight="bold" fill="#1D4ED8" text-anchor="middle" font-family="'SimHei'">${word}</text>
-        <text x="200" y="255" font-size="14" fill="#60A5FA" text-anchor="middle">AI 绘图中 (配置 API Key 即可全自动生成画作)</text>
-      </svg>`,
-      mnemonic: `大家经常说起《${word}》，多读多看，熟能生巧！`,
-      kidsExplanation: `这就像一个超级好玩的童话故事，小朋友多用这个成语，你的作文能拿一百分哦！`,
-      synonyms: enrichRelationshipsWithPinyin(["触类旁通", "融会贯通"]),
-      antonyms: enrichRelationshipsWithPinyin(["无独有偶", "截然不同"]),
-      story: `关于${word}的典故，流传于久远的故事里。通过它我们学到了宝贵的中华传统智慧！`
-    });
-  }
+  if (ai) {
+    try {
+      const prompt = `您是一位专门为中小学生创作中国传统成语教学内容的超级插画师和儿童作家。请为成语《${word}》输出极其专业、寓教于乐的高清卡片详细内容。
 
-  try {
-    const prompt = `你正在为一个专为中小学生设计的、具有成语插画和近义词关联网络的微信小程序游戏提供服务。
-现在，请为这个极为特别的成语生成符合要求的生动儿童学习卡片。
-目标成语： "${word}"
-
-必须严格返回 JSON 格式数据，不得包含任何 Markdown 代码块包裹（即不要带 \`\`\`json 和 \`\`\` 标记，直接返回 JSON 纯文本字符串）。
-JSON 格式需精确匹配以下字字段结构：
-{
-  "word": "${word}",
-  "pinyin": "声母韵母带声调的拼音 (例如: 'huà shé tiān zú')",
-  "definition": "一句话成语的标准权威词典释义",
-  "category": "根据成语难度归类，选择 'elementary'(小学)、'middle'(初中)、'high'(高中) 之一",
-  "illustration": "一段纯手工绘制的高品质可缩放矢量图形(SVG)代码字符串。背景使用治愈、童趣的清新淡雅浅色系背景(比如 #FFF9E6, #EDF7ED 等，圆角。宽度400，高度300。需要利用多重 <path>, <circle>, <ellipse>, <text> 在其中绘制该成语的主题拟人卡通形象或经典情节，且必须带有圆角边框及生动的图形元素，使其能和小朋友一眼联想记住，设计富有极强的童趣特色与插画师级别的色彩搭配)。",
-  "mnemonic": "一段朗朗上口的‘一眼速记口诀’或‘顺口溜’，帮助小朋友三秒钟记住这个成语并会用。字数在40-80字左右，语气十分热情幽默、可爱。",
-  "kidsExplanation": "一两句适合低年级或中小学生的‘白话大白话比喻解释’，例如用身边的学校、操场、生活场景做类比解释，极其生动。",
-  "synonyms": ["两个到四个相关的常见近义成语"],
-  "antonyms": ["两个到四个相关的常见反义或相对概念成语"],
+请严格仅返回 JSON 格式纯文本，不要在外部包裹任何其他说明、多余空格或 markdown 代码块包裹（即不要带 \`\`\`json 和 \`\`\` 标记，直接返回 JSON 纯文本字符串）。
+JSON 格式需精
+// Local presets of words and candidate definitions for non-AI fallback mode or robust filler safety.�相关的常见反义或相对概念成语"],
   "story": "该成语的经典历史典故或背景传说简短有趣叙事版本，控制在150字以内，浅显易懂。"
 }`;
 
-    const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
-      contents: prompt,
-      config: {
-        responseMimeType: "application/json",
-      },
-    });
+      const response = await ai.models.generateContent({
+        model: "gemini-3.5-flash",
+        contents: prompt,
+        config: {
+          responseMimeType: "application/json",
+        },
+      });
 
-    const textOutput = response.text || '';
-    const result = tryParseJSON(textOutput);
-    
-    // Standardize synonyms and antonyms to always be { word, pinyin } objects
-    let synonymsList: string[] = [];
-    if (result.synonyms && Array.isArray(result.synonyms)) {
-      synonymsList = result.synonyms.map((s: any) => typeof s === 'object' && s?.word ? s.word : String(s));
+      const parsed = tryParseJSON(response.text || '');
+      if (parsed && parsed.word) {
+        return res.json({
+          ...parsed,
+          synonyms: enrichRelationshipsWithPinyin(parsed.synonyms || []),
+          antonyms: enrichRelationshipsWithPinyin(parsed.antonyms || [])
+        });
+      }
+    } catch (err) {
+      console.error("Gemini idiom detail error:", err);
     }
-    let antonymsList: string[] = [];
-    if (result.antonyms && Array.isArray(result.antonyms)) {
-      antonymsList = result.antonyms.map((a: any) => typeof a === 'object' && a?.word ? a.word : String(a));
-    }
-    
-    result.synonyms = enrichRelationshipsWithPinyin(synonymsList);
-    result.antonyms = enrichRelationshipsWithPinyin(antonymsList);
-    
-    res.json(result);
-  } catch (error: any) {
-    console.error("Gemini Details Generation Error:", error);
-    // Graceful offline fallback when Gemini is unavailable (e.g., 503 high demand or network failure)
-    res.json({
-      word,
-      pinyin: `${word} pīn yīn`,
-      definition: `关于《${word}》的释义：已自动为您加载精美成语本地卡片，伴你快乐学习！`,
-      category: 'elementary',
-      illustration: generateDynamicSVG(word, 'elementary'),
-      mnemonic: `多读《${word}》口诀好，成语大王跑不掉！记住它，写作画画都奇妙！`,
-      kidsExplanation: `这就像一个超级有趣的生活小秘密，掌握了它，你就能在班里讲给其他小朋友听啦！`,
-      synonyms: enrichRelationshipsWithPinyin(["举一反三", "融会贯通"]),
-      antonyms: enrichRelationshipsWithPinyin(["大相径庭", "截然不同"]),
-      story: `关于“${word}”的精彩历史典故和趣味小故事，正在本地云图库中同步配送。我们可以通过字面意思和这幅画建立起非常自信的联想记忆哦！`
-    });
   }
+
+  // Final fallback if local doesn't exist AND AI is unavailable or fails
+  const categoryStr: 'elementary' | 'middle' | 'high' = 'elementary';
+  const fallbackSVG = generateDynamicSVG(word, categoryStr);
+  return res.json({
+    word,
+    pinyin: "yī fān fēng shùn",
+    definition: `关于成语《${word}》的趣味释义`,
+    category: categoryStr,
+    illustration: fallbackSVG,
+    mnemonic: `大声读着《${word}》，脑海画面有起伏。`,
+    kidsExplanation: `这就像是一个特别有趣的奥秘，等你去探索！`,
+    synonyms: [],
+    antonyms: [],
+    story: `关于成语《${word}》的故事，目前正在精心编纂中。`
+  });
+});
+
+app.get('/api/game/pk/question', async (req, res) => {
+  const grade = (req.query.grade as string) || 'elementary';
+  const excludeStr = (req.query.exclude as string) || '';
+  const excludeList = excludeStr.split(',').map(x => x.trim()).filter(x => x.length > 0);
+
+  // Divide our 1000 idioms pool among the 4 grades
+  let gradePool: string[] = [];
+  if (grade === 'elementary') {
+    gradePool = IDIOMS_1000_POOL.slice(0, 250);
+  } else if (grade === 'middle') {
+    gradePool = IDIOMS_1000_POOL.slice(250, 500);
+  } else if (grade === 'high') {
+    gradePool = IDIOMS_1000_POOL.slice(500, 750);
+  } else {
+    gradePool = IDIOMS_1000_POOL.slice(750, 1000);
+  }
+
+  // Filter out recently seen/excluded ones
+  let availableWords = gradePool.filter(w => !excludeList.includes(w));
+  if (availableWords.length === 0) {
+    availableWords = gradePool;
+  }
+
+  const targetWord = availableWords[Math.floor(Math.random() * availableWords.length)] || "画蛇添足";
+
+  if (ai) {
+    try {
+      const prompt = `你是一个非常专业优秀的成语趣味问答大PK出题官。我们正在开发一款针对中小学生的成语教学软件，其中有一个深受欢迎的板块叫「最强之最·大PK」。在这个板块中，我们要用趣味设问来做谜面，让孩子猜出对应成语。
+现在，请专为成语《${targetWord}》量身定制设计一道全新的、充满趣味性并完全符合学段「${grade}」学生的“成语谜面关卡”！
+
+请严格返回 JSON（不要带 Markdown 代码块，不要带 \`\`\`json 标记）：
+{
+  "question": "“最优秀的/最棒的/最...的 XXX”或高度生动的动作行为描述的趣味谜面（控制在20字以内，绝对不要在谜面中泄露谜底成语《${targetWord}》的任何字眼）",
+  "answer": "${targetWord}",
+  "pinyin": "成语拼音带声调",
+  "definition": "成语的准确白话基本释义",
+  "kidsExplanation": "一两句话，非常适合儿童和学生的白话幽默类比与解释（极其有温度、通俗易懂）",
+  "fact": "一句话成语经典源流典故、造句技巧或在写文章时的小贴士",
+  "mnemonic": "四句朗朗上口的儿歌或打油诗速记口诀，帮助孩子快速联想并记住该成语，控制在30字内（如：‘昨晚丢了一只羊，今天赶紧修栅栏...’）",
+  "story": "该成语的经典历史典故或传说故事白话小故事版本，极其有趣生动、情节精彩，150字以内，浅显易懂，适合小学生阅读",
+  "options": [
+    "${targetWord}",
+    "干扰成语A (必须是具有一定干扰性的相同或相似字数成语)",
+    "干扰成语B (必须是具有一定干扰性的相同或相似字数成语)",
+    "干扰成语C (必须是具有一定干扰性的相同或相似字数成语)"
+  ]
+}
+（请打乱 options 的顺序，使得正确答案不总是第一个，并且保证 options 是包含正确谜底在内的正好 4 项）`;
+
+      const response = await ai.models.generateContent({
+        model: "gemini-3.5-flash",
+        contents: prompt,
+        config: {
+          responseMimeType: "application/json",
+        },
+      });
+
+      const parsed = tryParseJSON(response.text || '');
+      if (parsed) {
+        parsed.answer = targetWord; // strictly guarantee the correct target word
+        if (!parsed.options) {
+          parsed.options = [targetWord, "画蛇添足", "盲人摸象", "守株待兔"];
+        }
+        // Make sure options has the correct answer
+        if (!parsed.options.includes(targetWord)) {
+          parsed.options[Math.floor(Math.random() * 4)] = targetWord;
+        }
+        // Shuffle options
+        parsed.options = parsed.options.sort(() => Math.random() - 0.5);
+        return res.json(parsed);
+      }
+    } catch (err) {
+      console.error("Gemini PK spec-word generator error:", err);
+    }
+  }
+
+  // Fallback to local pool if AI is down or fails
+  const randomQ = PK_QUESTIONS_POOL[Math.floor(Math.random() * PK_QUESTIONS_POOL.length)];
+  // shuffle options
+  const shuffledOptions = [...randomQ.options].sort(() => Math.random() - 0.5);
+  res.json({
+    question: randomQ.question,
+    answer: randomQ.answer,
+    pinyin: randomQ.pinyin,
+    definition: "比喻情况或实质对应的描述。",
+    kidsExplanation: randomQ.kidsExplanation,
+    fact: randomQ.fact,
+    mnemonic: "儿歌速记，快乐巧学：成语字词记在心，朗朗上口好温习！",
+    story: `关于“${randomQ.answer}”，古人曾留下精彩绝伦的历史传说与文学印记，鼓励小朋友努力拼搏、知错就改、积极向上，这就是它的魅力所在。`,
+    options: shuffledOptions
+  });
 });
 
 const riddleImageCache = new Map<string, string>();
